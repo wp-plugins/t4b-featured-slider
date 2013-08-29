@@ -1,5 +1,6 @@
 === T4B Featured Slider ===
 Contributors: Iftekhar
+Author URI: http://www.tips4blog.com/
 Tags: Iftekhar, featured, slider, featured post slider, get id from url, tips4blog
 Requires at least: 3.0
 Tested up to: 3.6
@@ -8,20 +9,22 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
-This plugin will help you to find the ID of posts from the post URL and show those posts as featured post using slider.
+"T4B Featured Slider" allows you to show featured posts on your blog using a smooth jQuery slider. You can easily make a post as featured post by adding the post-ID, which you will get by entering the post URL.
 
 
 == Description == 
-"T4B Featured Slider" is a simple and easy WordPress plugin. You can use this plugin as an alternate of WordPress sticky posts. First, you have to add the ID of featured posts. To get the ID of a post simply enter the URL of the post in the given text field and then click on Get ID button. Copy the ID and paste into the second text field where the Add ID button exists. After that, click on Add ID button. If nothing goes wrong you will get a confirmation message that you have successfully inserted the post-ID. You can also remove a featured post by entering the ID of a post in the third text field. After entering the ID, click on the Delete ID button. At the end, you will be shown all the featured posts list that you have added. Now, if you want to show the featured slider, then enable the featured slider, which is located at the top of settings page. Finally, copy the below code and paste where you want to show featured slider.
+"T4B Featured Slider" is a simple and easy WordPress plugin. You can use this plugin as an alternate of WordPress sticky posts. First, you have to add the ID of featured posts. To get the ID of a post simply enter the URL of the post in the given text field and then click on Get ID button. Copy the ID and paste into the second text field where the Add ID button exists. After that, click on Add ID button. If nothing goes wrong you will get a confirmation message that you have successfully inserted the post-ID. You can also remove a featured post by entering the ID of a post in the third text field. After entering the ID, click on the Delete ID button. At the end, you will be shown all the featured posts list that you have added. Now, if you want to show the featured slider, then enable the featured slider, which is located at the top of settings page. Finally, copy the code (to get the code see FAQ) and paste where you want to show featured slider.
 
 = Usage =
 
-Install and activate the plugin. Then go to your Dashboard, then "T4B Slider > Usage" for detail usage instructions.
+* Install and activate the plugin. Go to your Dashboard, then navigate to "T4B Slider >> Usage" for detail usage instructions.
 
 
 = Features: =
-- URL to ID
-- Show featured post using slider
+- Add ID from post permalink.
+- Show featured post using slider.
+- Enabled or Disabled Slider.
+- Lists of all featured posts.
 
 
 = Credits =
@@ -39,14 +42,14 @@ Install and activate the plugin. Then go to your Dashboard, then "T4B Slider > U
 
 1. Upload the whole plugin folder to your /wp-content/plugins/ folder.
 2. Install and activate the plugin.
-3. Go to: T4B Slider > Usage
+3. Go to: T4B Slider >> Usage
 
 
 == Frequently Asked Questions ==
 
 = How does it work? =
 
-Use the code in your blog post/page:
+* Use the code in your blog post/page:
 
  	<?php if(get_option('t4b_option')==Enabled) { ?>
 	<?php
@@ -79,12 +82,11 @@ Use the code in your blog post/page:
    	<?php endif; ?>
 	<?php } ?>
 
-Before Deleting the plugin disabled the show featured slider option.
-
-After Deleting the plugin remove also the code from your blog post/page
+* Before Deactivating the plugin disabled the show featured slider option.
+* After Deactivating the plugin remove also the code from your blog post/page.
 
 
 == Screenshots ==
-1. Featured Slider.
+1. Plugin Usage.
 2. Plugin Settings.
-3. Plugin Usage.
+3. Featured Slider.
