@@ -49,7 +49,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 = How does it work? =
 
-* Use the code in your blog post/page:
+Use the code in your blog post/page:
 
  	<?php if(get_option('t4b_option')==Enabled) { ?>
 	<?php
@@ -82,8 +82,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    	<?php endif; ?>
 	<?php } ?>
 
-* Before Deactivating the plugin disabled the show featured slider option.
-* After Deactivating the plugin remove also the code from your blog post/page.
+Before Deactivating the plugin disabled the show featured slider option.
+After Deactivating the plugin remove also the code from your blog post/page.
 
 
 == Screenshots ==
