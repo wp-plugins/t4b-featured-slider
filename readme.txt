@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
-"T4B Featured Slider" allows you to show featured posts on your blog using a smooth jQuery slider. You can easily make a post as featured post by adding the post-ID, which you will get by entering the post URL.
+"T4B Featured Slider" allows you to show featured posts on your blog using a smooth jQuery slider.
 
 
 == Description == 
