@@ -4,8 +4,25 @@ Plugin Name: T4B Featured Slider
 Plugin URI: http://wordpress.org/plugins/t4b-featured-slider/
 Version: 1.0
 Description: "T4B Featured Slider" allows you to show featured posts on your blog using a smooth jQuery slider.
-Author: <a href="http://profiles.wordpress.org/moviehour">Iftekhar</a>
+Author: Iftekhar
+Author URI: http://profiles.wordpress.org/moviehour/
 Text Domain: t4b
+*/
+
+/*  Copyright 2013  Iftekhar  (email : moviehour@gmail.com)
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License, version 2, as 
+    published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 if(is_admin())
