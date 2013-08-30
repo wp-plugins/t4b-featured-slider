@@ -1,11 +1,10 @@
 <?php
 /*
 Plugin Name: T4B Featured Slider
-Plugin URI: http://www.tips4blog.com/
-Description: This plugin will help you to find the ID of posts from the post URL and show those posts as featured post using slider.
+Plugin URI: http://wordpress.org/plugins/t4b-featured-slider/
 Version: 1.0
-Author: Iftekhar
-Author URI: http://www.tips4blog.com/about-me/
+Description: "T4B Featured Slider" allows you to show featured posts on your blog using a smooth jQuery slider.
+Author: <a href="http://profiles.wordpress.org/moviehour">Iftekhar</a>
 Text Domain: t4b
 */
 
