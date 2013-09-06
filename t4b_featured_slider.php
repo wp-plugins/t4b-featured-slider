@@ -2,7 +2,7 @@
 /*
 Plugin Name: T4B Featured Slider
 Plugin URI: http://wordpress.org/plugins/t4b-featured-slider/
-Version: 1.0
+Version: 1.1
 Description: "T4B Featured Slider" allows you to show featured posts on your blog using a smooth jQuery slider.
 Author: Iftekhar
 Author URI: http://profiles.wordpress.org/moviehour/
@@ -30,7 +30,6 @@ if(is_admin())
 
 add_action( 'init', 'featured_post_install', 1 );
 add_action( 'switch_blog', 'featured_post_install' );
-
 function featured_post_install() {
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	global $wpdb;
@@ -83,12 +82,12 @@ function add_featured_post($post_id, $post_title) {
 	if($duplicate) {
 		$sql_to_update = "update $table_name set post_title=".($post_title)." where post_id='$post_id';";
 		$wpdb->query($sql_to_update);
-		$msg = "Congratulations! You have successfully updated the post ID.";
+		$msg = "The ID you have inserted is already exist in the featured lists! Try another.";
 		return $msg;
 	} else {
 		$sql_to_insert = "insert into $table_name(post_id,post_title,activity_date) values('$post_id','$post_title',NOW());";
 		$wpdb->query($sql_to_insert);
-		$msg = "Congratulations! You have successfully inserted the post ID.";
+		$msg = "Congratulations! You have successfully inserted the post in the featured lists.";
 		return $msg;
 	}
 }
@@ -101,10 +100,7 @@ function remove_featured_post($post_id) {
 	if($duplicate) {
 		$sql_to_delete = "delete from $table_name where post_id='$post_id';";
 		$wpdb->query($sql_to_delete);
-		$msg = "Congratulations! You have successfully deleted the post ID.";
-		return $msg;
-	} else {
-		$msg = "Sorry! The ID you have inserted in not exist in our database!";
+		$msg = "The post successfully deleted from the featured lists.";
 		return $msg;
 	}
 }
@@ -127,23 +123,47 @@ function t4b_enqueue_scripts(){
 		wp_enqueue_script('t4b-front-js');
 	}
 }
-
 add_action('init', 't4b_enqueue_scripts');
 
 function show_Featured_Post_Slider() {
 ?>
-<script type="text/javascript">
-
- jQuery(document).ready(function(){
-    jQuery('#pslider').bxSlider({
-	  mode: 'fade',
-	  controls:false,
-	  auto:true,
-	  pager: true
-	});
-  });
-
-</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#pslider').bxSlider({
+				mode: 'fade',
+				controls:false,
+				auto:true,
+				pager: true
+			});
+		});
+	</script>
+<?php
+		$stickies = t4bFeaturedPost();
+		rsort( $stickies );
+		$stickies = array_slice( $stickies, 0, 10 );
+		$args = array( 'post__in' => $stickies, 'caller_get_posts' => 1 );
+		$featured = new WP_Query( $args );
+		
+		if ($featured->have_posts()): ?>
+		<div id="pcover">
+			<div id="pslider">
+				<?php while( $featured->have_posts() ) : $featured->the_post(); ?>
+					<div class="mytext">
+						<?php if ( has_post_thumbnail() ) { ?>
+							<a href="<?php the_permalink() ?>"><img class="slimg" src="<?php get_image_url(); ?>" alt="" /></a>
+						<?php } else { ?>
+							<a href="<?php the_permalink() ?>">
+								<img class="slimg" src="<?php bloginfo('template_directory'); ?>/images/dummy.png" alt="" />
+							</a>
+						<?php } ?>
+                           	<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                           	<span>By <?php the_author_posts_link(); ?> On <?php the_time('M j, Y'); ?><?php comments_popup_link('0 Comment', '1 Comment', '% Comments'); ?></span>
+							<p><?php wpe_excerpt('wpe_excerptlength_featp', ''); ?></p>
+					</div>   	
+			    <?php endwhile; wp_reset_query(); ?>
+			</div>
+		</div>
+   	<?php endif; ?>
 <?php
 }
 ?>
