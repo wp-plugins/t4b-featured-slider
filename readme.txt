@@ -83,17 +83,18 @@ Use the code in your blog post/page:
 
 To prevent duplicate posts from displaying while using featured slider, put the below code and get all posts, excepted the ones we have already outputted in the featured slider:
 
-<?php
-$stickies = t4bFeaturedPost();
-$temp = $wp_query;
-$wp_query = null;
-if(get_option('t4b_option') == Enabled) {
-$wp_query = new WP_Query(array( 'post__not_in' => $stickies ));
-} else {
-$wp_query = new WP_Query();
-}
-?>
-//Then put the rest of the codes.
+	<?php
+		$stickies = t4bFeaturedPost();
+		$temp = $wp_query;
+		$wp_query = null;
+		if(get_option('t4b_option') == Enabled) {
+			$wp_query = new WP_Query(array( 'post__not_in' => $stickies ));
+		} else {
+			$wp_query = new WP_Query();
+		}
+	?>
+
+Then put the rest of the codes.
 
 = What to do after deactivating the plugin =
 
