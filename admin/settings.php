@@ -81,10 +81,6 @@
 						    <th><label for="chars">Limit Description (Number of words)</label></th>
 						    <td><input type="text" name="limit" value="<?php $t4b_slider_limit = get_option('limit'); if(!empty($t4b_slider_limit)) { echo $t4b_slider_limit; } else { echo "60"; } ?>"></td>
 					    </tr>
-			    		<tr>
-						    <th><label for="limit_posts">Limit Number of Posts (0 = unlimited)</label></th>
-						    <td><input type="text" name="limit_posts" value="<?php $t4b_slider_limit_posts = get_option('limit_posts'); if(!empty($t4b_slider_limit_posts)) { echo $t4b_slider_limit_posts; } else { echo "0"; } ?>"></td>
-			    		</tr>
 					    <tr>
 						    <th><label for="feat_width">Set Slider Width</label></th>
 						    <td><input type="text" name="feat_width" value="<?php $t4b_slider_width = get_option('feat_width'); if(!empty($t4b_slider_width)) {echo $t4b_slider_width;} else {echo "640";}?>"></td>
@@ -126,7 +122,7 @@
 						    <td><input type="text" name="link_hover" value="<?php $t4b_slider_link_hover = get_option('link_hover'); if(!empty($t4b_slider_link_hover)) {echo $t4b_slider_link_hover;} else {echo "F4F4F2";}?>"></td>
 			    		</tr>
 						<tr>
-							<td colspan="2"><input type="hidden" name="action" value="update" /><input type="hidden" name="page_options" value="sort, order, slider_top, slider_bot, slider_left, title_color, title_visited, read_more, limit, limit_posts, feat_width, feat_height, feat_bg, feat_border, text_color, cont_width, img_width, img_height, img_bg, link_color, link_hover" /><input type="submit" name="upd_opt" class="button-primary" value="<?php _e('Update Options') ?>" /></td>
+							<td colspan="2"><input type="hidden" name="action" value="update" /><input type="hidden" name="page_options" value="sort, order, slider_top, slider_bot, slider_left, title_color, title_visited, read_more, limit, feat_width, feat_height, feat_bg, feat_border, text_color, cont_width, img_width, img_height, img_bg, link_color, link_hover" /><input type="submit" name="upd_opt" class="button-primary" value="<?php _e('Update Options') ?>" /></td>
 						</tr>
 				    </table>
 				</div>

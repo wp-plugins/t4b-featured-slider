@@ -33,8 +33,6 @@
 	<?php if ($dres) { echo '<div id="message" class="updated"><p>'. $dres .'</p></div>'.PHP_EOL; } ?>
 	<?php if ($qres) { echo '<div id="message" class="updated"><p>'. $qres .'</p></div>'.PHP_EOL; } ?>
 	<div style="width: 68%; float: left;">
-	<table class="form-table">
-		<tr><td>
 		<form method="post" id="myForm" enctype="multipart/form-data">
 		<div class="postbox" style="display: block;float:left;margin:5px;clear:left; width: 99%;">
 			<h3 class="hndle" style="padding:5px; color:#007193;">Get the ID</h3>
@@ -52,8 +50,6 @@
 				</div>
 			</div>
 		</div>
-		</td></tr>
-		<tr><td>
 		<div class="postbox" style="display: block;float:left;margin:5px;clear:left; width: 99%;">
 			<h3 class="hndle" style="padding:5px; color:#007193;">Add Post in the Featured Lists</h3>
 			<div class="inside">
@@ -68,8 +64,22 @@
 				</div>
 			</div>
 		</div>
-		</td></tr>
-		<tr><td>
+		<div class="postbox" style="display: block;float:left;margin:5px;clear:left; width: 99%;">
+			<h3 class="hndle" style="padding:5px; color:#007193;">Delete Post from the Featured Lists</h3>
+			<div class="inside">
+				<div><p align="justify">To delete a post simply enter the post ID and click on Delete button.</p>
+	   				<table class="form-table">
+       					<tr valign="top">
+   	   						<td width="30%">Enter the post ID:</td>
+    	    				<td width="70%"><input type="text" name="rmvID" size="10" value="" /></td>
+   	   					</tr>
+       					<tr valign="top">
+							<td><input type="submit" name="unlist_id" class="button-primary" value="Delete" /></td>
+   	   					</tr>
+		    		</table>
+				</div>
+			</div>
+		</div>
 		<div class="postbox" style="display: block;float:left;margin:5px;clear:left;width:99%; background:#F4F4F2;">
 			<h3 class="hndle" style="padding:5px; color:#007193;">Featured Post Lists</h3>
 			<div class="inside">
@@ -81,24 +91,22 @@
 						$sn = 1;
 						if(count($all_lists) > 0) {
 					?>
-							<table class="form-table" border="1" width="100%" bordercolor="#007193">
+							<table class="form-table" border="1" width="100%">
 	        					<thead><tr valign="top">
-									<th scope="row"><strong>SN</strong></th>
-									<th scope="row"><strong>ID</strong></th>
-       								<th scope="row"><strong>Post ID</strong></th>
-       								<th scope="row"><strong>Post Title</strong></th>
-	        						<th scope="row"><strong>Activity Date</strong></th>
-	        						<th scope="row"><strong>Delete Post</strong></th>
+									<td scope="row"><strong>SN</strong></td>
+									<td scope="row"><strong>ID</strong></td>
+       								<td scope="row"><strong>Post ID</strong></td>
+       								<td scope="row"><strong>Post Title</strong></td>
+	        						<td scope="row"><strong>Activity Date</strong></td>
        							</tr></thead>
 								<tbody>
 								<?php foreach($all_lists as $flists) { ?>
 	        						<tr valign="top">
 										<td width="2%"><?php echo $sn; ?></td>
-										<td width="4%"><?php echo $flists->id; ?></td>
-										<td width="9%"><?php echo $flists->post_id; ?></td>
-										<td width="55%"><?php echo $flists->post_title; ?></td>
-										<td width="18%"><?php echo $flists->activity_date; ?></td>
-										<td width="12%"><input type="hidden" name="rmvID" value="<?php echo $flists->post_id; ?>" /><input type="submit" name="unlist_id" class="button-primary" value="Delete" /></td>
+										<td width="3%"><?php echo $flists->id; ?></td>
+										<td width="10%"><?php echo $flists->post_id; ?></td>
+										<td width="60%"><?php echo $flists->post_title; ?></td>
+										<td width="15%"><?php echo $flists->activity_date; ?></td>
 									</tr>
 								<?php $sn++; } ?>
 								</tbody>
@@ -108,8 +116,6 @@
 			</div>
 		</div>
 		</form>
-		</td></tr>
-	</table>
 	</div>
 	<?php echo t4b_sidebar(); ?>
 </div>

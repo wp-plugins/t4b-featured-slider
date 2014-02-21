@@ -1,10 +1,9 @@
 === T4B Featured Slider ===
-Contributors: Iftekhar
-Author URI: http://profiles.wordpress.org/moviehour/
+Contributors: moviehour
 Requires at least: 3.0
-Tested up to: 3.6.1
+Tested up to: 3.8.1
 Tags: Iftekhar, featured post, slider, featured post slider, get id from url, tips4blog
-Stable Tag: 1.2
+Stable Tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +26,7 @@ Finally, copy the below code and paste in your blog posts/pages, where you want 
 * Install and activate the plugin. Go to your Dashboard, then navigate to "T4B Slider >> Usage" for detail usage instructions.
 
 
-= Features: =
+= Features =
 
 * Add ID from post permalink.
 * Show Featured post using slider.
@@ -39,8 +38,7 @@ Finally, copy the below code and paste in your blog posts/pages, where you want 
 = Credits =
 
 * Developer: [Md. Iftekharul Ibna Alam](http://facebook.com/IKIAlam)
-* E-Mail: moviehour@gmail.com
-* Website: [www.tips4blog.com](http://www.tips4blog.com)
+* Website: [TiPS4BLOG](http://www.tips4blog.com)
 
 
 == Changelog ==
@@ -55,6 +53,9 @@ Finally, copy the below code and paste in your blog posts/pages, where you want 
 * Third release.
 * Included Settings >> T4B Featured Slider Configuration.
 
+= 1.3 (21-2-2014) =
+* Fourth release.
+* Fixed some bugs.
 
 == Installation ==
 

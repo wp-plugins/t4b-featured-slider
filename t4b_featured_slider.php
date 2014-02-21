@@ -2,14 +2,14 @@
 /*
 Plugin Name: T4B Featured Slider
 Plugin URI: http://wordpress.org/plugins/t4b-featured-slider/
-Version: 1.2
+Version: 1.3
 Description: "T4B Featured Slider" allows you to show featured posts on your blog using a smooth jQuery slider.
 Author: Iftekhar
 Author URI: http://profiles.wordpress.org/moviehour/
 Text Domain: t4b
 */
 
-/*  Copyright 2013  Iftekhar  (email : moviehour@gmail.com)
+/*  Copyright 2014  Iftekhar  (email : moviehour@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -275,11 +275,9 @@ margin-left:5px;
 <?php
 	$t4b_slider_sort = get_option('sort'); if(empty($t4b_slider_sort)){$t4b_slider_sort = "post_date";}
 	$t4b_slider_order = get_option('order'); if(empty($t4b_slider_order)){$t4b_slider_order = "DESC";}
-	$t4b_slider_post_limit = get_option('limit_posts'); if(empty($t4b_slider_limit_posts)){$t4b_slider_limit_posts = "-1";}
 
 	$stickies = t4bFeaturedPost();
 	rsort( $stickies );
-	$stickies = array_slice( $stickies, 0, $t4b_slider_post_limit );
 	$args = array( 'post__in' => $stickies, 'caller_get_posts' => 1, 'orderby' => $t4b_slider_sort, 'order' => $t4b_slider_order);
 	$featured = new WP_Query( $args );
 		
@@ -297,7 +295,7 @@ margin-left:5px;
 				<?php } ?>
 				<div class="mytext-right">
                    	<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-                   	<span>By&nbsp;&nbsp;<?php the_author_posts_link(); ?>&nbsp;&nbsp;On&nbsp;&nbsp;<?php the_time('M j, Y'); ?>&nbsp;&nbsp;<?php comments_popup_link('0 Comment', '1 Comment', '% Comments'); ?></span>
+                   	<span>By&nbsp;&nbsp;&nbsp;<?php the_author_posts_link(); ?>&nbsp;&nbsp;&nbsp;On&nbsp;&nbsp;&nbsp;<?php the_time('M j, Y'); ?>&nbsp;&nbsp;&nbsp;<?php comments_popup_link('0 Comment', '1 Comment', '% Comments'); ?></span>
 					<?php t4b_wpe_excerpt('wpe_excerptlength_feapost', 'wpe_excerptmore_feapost'); ?>
 				</div>
 			</div>   	
