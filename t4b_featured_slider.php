@@ -2,7 +2,7 @@
 /*
 Plugin Name: T4B Featured Slider
 Plugin URI: http://wordpress.org/plugins/t4b-featured-slider/
-Version: 1.4
+Version: 1.5
 Description: "T4B Featured Slider" allows you to show featured posts on your blog using a smooth jQuery slider.
 Author: Iftekhar
 Author URI: http://profiles.wordpress.org/moviehour/
