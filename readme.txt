@@ -1,9 +1,9 @@
 === T4B Featured Slider ===
 Contributors: moviehour
-Requires at least: 3.0
-Tested up to: 3.8.1
+Requires at least: 3.5
+Tested up to: 4.1
 Tags: Iftekhar, featured post, slider, featured post slider, get id from url, tips4blog
-Stable Tag: 1.3
+Stable Tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,11 +14,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description == 
 "T4B Featured Slider" is a simple and easy WordPress plugin to show featured posts on your blog using a smooth jQuery slider. You can use this plugin as an alternate of WordPress Sticky posts.
 
-At first, you have to add the ID of a post, which you wish to see in the featured lists. To get the ID of a post simply enter the URL of the post in the given text field at the Featured page and click on Get ID button. It will show you the ID of the post. Just enter the ID into the second text field where the Add Post button exists and click on that button. If nothing goes wrong you will get a confirmation message that you have successfully inserted the post in the featured lists. You can also remove a featured post from the list. In the table of featured post lists you will get a Delete button beside each of the post list. Now, to remove a featured post, simply click on the Delete button that exists on that post row.
+To get started click on Add Post button under Featured section. Add featured posts as many as you want to show in your blog by entering the post ID. You can easily findout the post id from the right sidebar. Just enter the URL of the post and click on Get ID button. Later you can edit, delete and reorder featured posts at any time.
 
-At the end, to show the featured slider, just enable the Show Featured Slider option located at the top of the Settings page, where you can also customize the Featured Slider from T4B Featured Slider Configuration by changing the options. You don't have to edit the Stylesheet, you can make changes directly in your Administration Panel (Settings >> T4B Featured Slider Configuration).
-
-Finally, copy the below code and paste in your blog posts/pages, where you want to show the featured slider.
+Now, copy the below code and paste it in your blog posts/pages, where you want to show featured slider. In the end, enable the featured slider located at the top under Settings section. There you can also easily configure the slider by changing the settings without editing the stylesheet.
 
 
 = Usage =
@@ -28,10 +26,10 @@ Finally, copy the below code and paste in your blog posts/pages, where you want 
 
 = Features =
 
-* Add ID from post permalink.
 * Show Featured post using slider.
 * Enabled or Disabled Slider.
 * Featured Slider Configuration.
+* Edit, delete and reorder featured posts at any time.
 * Lists of all Featured posts.
 
 
@@ -57,12 +55,17 @@ Finally, copy the below code and paste in your blog posts/pages, where you want 
 * Fourth release.
 * Fixed some bugs.
 
+= 1.4 (26-12-2014) =
+* Fifth release.
+* Fixed some bugs.
+* Make the slider even more user friendly.
+
 == Installation ==
 
 1. Upload the whole plugin folder to your /wp-content/plugins/ folder.
 2. Install and activate the plugin.
 3. Go to: T4B Slider >> Usage
-4. Place '<?php if(get_option('t4b_option')==Enabled) { if(function_exists(show_Featured_Post_Slider())) { show_Featured_Post_Slider(); } } ?>' in your template on a page/post to show the Slidehsow.
+4. Place the given code in your blog page/post to show the Slidehsow.
 5. Edit Layout & Settings in WP-Admin (Settings >> T4B Featured Slider Configuration)
 
 
@@ -87,7 +90,7 @@ Finally, copy the below code and paste in your blog posts/pages, where you want 
 
 = How does it work? =
 
-Use the code in your blog post/page:
+Put the below code snippet in your blog posts/pages, where you want to show featured slider:
 
 	<?php
 		if(get_option('t4b_option')==Enabled) {
@@ -97,7 +100,7 @@ Use the code in your blog post/page:
 
 = How to prevent duplicate posts from displaying =
 
-To prevent duplicate posts from displaying while using featured slider, put the below code and get all posts, excepted the ones we have already outputted in the featured slider:
+To prevent duplicate posts from displaying while using featured slider, take the help from the below code snippet to get an idea before quering. It will help you to get all the posts that have been queried, except the ones we have already outputted in the featured slider:
 
 	<?php
 		$stickies = t4bFeaturedPost();
@@ -126,7 +129,7 @@ You don't have to edit the Stylesheet you can make changes directly in your Admi
 
 
 == Screenshots ==
-1. Plugin Usage.
-2. Plugin Settings-1.
-3. Plugin Settings-2.
-4. Featured Slider.
+1. List of Featured Post.
+2. Edit/Add Featured Post.
+3. Slider Settings.
+4. Featured Slider Display.
