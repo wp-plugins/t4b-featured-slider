@@ -3,7 +3,7 @@ Contributors: moviehour
 Requires at least: 3.5
 Tested up to: 4.1
 Tags: Iftekhar, featured post, slider, featured post slider, get id from url, tips4blog
-Stable Tag: 1.4
+Stable Tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
