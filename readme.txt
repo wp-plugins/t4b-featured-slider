@@ -60,8 +60,7 @@ Now, copy the below code and paste it in your blog posts/pages, where you want t
 * Fixed some bugs.
 
 = 1.5 (26-12-2014) =
-* Fifth release.
-* Fixed some bugs.
+* Sixth release.
 * Made the slider even more user friendly.
 
 
