@@ -26,7 +26,7 @@ Text Domain: t4b
 */
 
 define('T4B_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
-if(is_admin()) { include ( T4B_PLUGIN_PATH . 't4b-admin.php' ); }
+if(is_admin()) { include ( T4B_PLUGIN_PATH . 't4b_admin.php' ); }
 function t4b_admin_enqueue_scripts() {
 	wp_register_script('t4b-admin-js', WP_PLUGIN_URL .'/t4b-featured-slider/js/t4b-admin.js', array('jquery'), '1.0');
 	wp_enqueue_script('t4b-admin-js');
