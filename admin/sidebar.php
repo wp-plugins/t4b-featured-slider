@@ -42,7 +42,7 @@
 				<h3>Plugin Info</h3>
 				<ul class="t4busage-list">
 					<li>Price: Free!</li>
-					<li>Version: 1.4</li>
+					<li>Version: 1.5</li>
 					<li>Scripts: PHP + JS + CSS</li>
 					<li>Requires: Wordpress 3.5+</li>
 					<li>First release: 29 August 2013</li>
