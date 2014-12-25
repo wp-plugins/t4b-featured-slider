@@ -3,7 +3,7 @@ Contributors: moviehour
 Requires at least: 3.5
 Tested up to: 4.1
 Tags: Iftekhar, featured post, slider, featured post slider, get id from url, tips4blog
-Stable Tag: 1.4.1
+Stable Tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,10 +55,15 @@ Now, copy the below code and paste it in your blog posts/pages, where you want t
 * Fourth release.
 * Fixed some bugs.
 
-= 1.4 (26-12-2014) =
+= 1.4 (25-12-2014) =
 * Fifth release.
 * Fixed some bugs.
-* Make the slider even more user friendly.
+
+= 1.5 (26-12-2014) =
+* Fifth release.
+* Fixed some bugs.
+* Made the slider even more user friendly.
+
 
 == Installation ==
 
