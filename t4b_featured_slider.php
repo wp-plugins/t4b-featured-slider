@@ -69,7 +69,7 @@ function t4b_process_featured_post() {
 		if ($_POST['list_id'] == 'Add Post') {
 			foreach($postid as $key => $pid) {
 				$postdata = get_post($pid, ARRAY_A);
-				$post_title = $postdata['post_title'];
+				$post_title = addslashes($postdata['post_title']);
 				$post_type = $postdata['post_type'];
 				if($post_type == 'post') {
 					$sql_to_insert = "insert into $table_name(post_id,post_title,activity_date) values('$pid','$post_title',NOW());";
@@ -81,7 +81,7 @@ function t4b_process_featured_post() {
 			$wpdb->query($sql_to_delete);
 			foreach($postid as $key => $pid) {
 				$postdata = get_post($pid, ARRAY_A);
-				$post_title = $postdata['post_title'];
+				$post_title = addslashes($postdata['post_title']);
 				$post_type = $postdata['post_type'];
 				if($post_type == 'post') {
 					$sql_to_insert = "insert into $table_name(post_id,post_title,activity_date) values('$pid','$post_title',NOW());";
